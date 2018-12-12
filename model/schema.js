@@ -1,4 +1,6 @@
-const Authors = require('/data/authors');
+const _ = require('lodash');
+
+const Authors = require('./data/authors');
 const Posts = require('./data/posts');
 
 let {
@@ -59,3 +61,5 @@ const BlogQueryRootType = new GraphQLObjectType({
 const BlogAppSchema = new GraphQLSchema({
 	query: BlogQueryRootType
 });
+
+module.exports = BlogAppSchema;
